@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Waist-to-Height Ratio Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <h1><a href="index.html" class="logo-link">🩺 Health Tools</a></h1>
+      <div class="header-controls">
+        <a href="index.html" class="back-link">🏠 Dashboard</a>
+        <button id="darkToggle">🌙</button>
+      </div>
+    </header>
+
+    <main class="calculator-container">
+      <form id="whtrForm">
+        <label>
+          Height (in cm):
+          <input type="number" id="height" required />
+        </label>
+
+        <label>
+          Waist Circumference (in cm):
+          <input type="number" id="waist" required />
+        </label>
+
+        <button type="submit">Calculate WHtR</button>
+      </form>
+
+      <div id="resultBox" class="result-box">
+        Click the Calculate Button to see the result
+      </div>
+      <div class="chart-container">
+        <canvas id="whtrChart"></canvas>
+      </div>
+    </main>
+    <footer class="app-footer">
+      <p>© 2025 Kumar Gourav</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pregnancy Due Date Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1><a href="index.html" class="logo-link">🩺 Health Tools</a></h1>
+      <div class="header-controls">
+        <a href="index.html" class="back-link">🏠 Dashboard</a>
+        <button id="darkToggle">🌙</button>
+      </div>
+    </header>
+
+    <main class="calculator-container">
+      <form id="pregnancyForm">
+        <label>
+          First Day of Last Menstrual Period (LMP):
+          <input type="date" id="lmpDate" required />
+        </label>
+
+        <button type="submit">Calculate Due Date</button>
+      </form>
+
+      <div id="resultBox" class="result-box">
+        Click the Calculate Button to see the result
+      </div>
+      <div class="chart-container">
+        <canvas id="pregnancyChart"></canvas>
+      </div>
+      <div id="weekTracker" class="week-tracker"></div>
+    </main>
+
+    <footer class="app-footer">
+      <p>© 2025 Kumar Gourav</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

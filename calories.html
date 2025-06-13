@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calories Burned Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <h1><a href="index.html" class="logo-link">🩺 Health Tools</a></h1>
+      <div class="header-controls">
+        <a href="index.html" class="back-link">🏠 Dashboard</a>
+        <button id="darkToggle">🌙</button>
+      </div>
+    </header>
+
+    <main class="calculator-container">
+      <form id="calorieForm">
+        <label>
+          Weight (kg):
+          <input type="number" id="weight" required />
+        </label>
+
+        <label>
+          Select Activity:
+          <select id="activitySelect" required>
+            <option value="8">Running (8 MET)</option>
+            <option value="3.5">Walking (3.5 MET)</option>
+            <option value="7">Cycling (7 MET)</option>
+            <option value="6">Dancing (6 MET)</option>
+            <option value="9.8">Swimming (9.8 MET)</option>
+          </select>
+        </label>
+
+        <label>
+          Duration (minutes):
+          <input type="number" id="duration" required />
+        </label>
+
+        <button type="submit">Calculate</button>
+      </form>
+
+      <div id="calorieResult" class="result-box">
+        Click the Calculate Button to see the result
+      </div>
+      <div class="chart-container">
+        <canvas id="calorieChart"></canvas>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <p>© 2025 Kumar Gourav</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
